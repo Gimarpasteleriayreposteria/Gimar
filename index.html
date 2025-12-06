@@ -18,19 +18,17 @@
 
   <!-- Minimal CSS (embedded for single-file delivery) -->
   <style>
-    /* SOLO para celulares */
-@media (max-width: 768px) {
-  .tuClaseDeImagen {
-    width: 100%;
-    height: auto;          /* evita el recorte vertical */
-    object-fit: contain;   /* hace que se vea completa */
-    object-position: center; 
-  }
-
-  .tuContenedorDeImagen {
-    height: auto !important;  /* evita que el contenedor recorte la imagen */
+  /* --- FIX: imágenes completas en celulares --- */
+@media (max-width: 600px) {
+  .grid img,
+  .card img {
+    height: auto !important;   /* permite altura natural */
+    max-height: 320px;         /* evita imágenes demasiado altas */
+    object-fit: contain !important; /* evita recortes */
+    background: #fff;          /* fondo limpio */
   }
 }
+
     @media (max-width:520px){
   .grid img{
     height:auto;
