@@ -18,6 +18,19 @@
 
   <!-- Minimal CSS (embedded for single-file delivery) -->
   <style>
+    /* SOLO para celulares */
+@media (max-width: 768px) {
+  .tuClaseDeImagen {
+    width: 100%;
+    height: auto;          /* evita el recorte vertical */
+    object-fit: contain;   /* hace que se vea completa */
+    object-position: center; 
+  }
+
+  .tuContenedorDeImagen {
+    height: auto !important;  /* evita que el contenedor recorte la imagen */
+  }
+}
     @media (max-width:520px){
   .grid img{
     height:auto;
